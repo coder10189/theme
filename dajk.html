@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+       
+        function passwordcheck() {
+            let  x = document.getElementById("email")
+            let y= document.getElementById("password")
+            let z=document.getElementById("label12")
+if(x.value==="admin" && y.value==="password"){
+    window.open()
+    }
+    else {
+              z.innerHTML =("Invalid email or password. Please try again.");
+              setTimeout(() => {document.location.reload();}, 3000);
+            }
+}
+    </script>
+    <title>Popup Message</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="font-family: 'Times New Roman', Times, serif;">Click the Button</h2>
+        <br>
+        <br>
+        <button onclick="showPopup()" style="font-family:'Times New Roman', Times, serif;">Click Me!</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Hello, this is a custom popup message!</p>
+            <section class="texttobeadd">
+                <p>Email</p>
+                <input id="email" type="email" placeholder="email@gmail.com" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+                ; font-size: 20px; width: 100%;">
+                <p>Password</p>
+                <input type="password" id="password" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-block-end: 1.5em; font-size: 20px; width: 100%;">
+            <label id="label12" style="color:  red;"></label>
+            </section>
+            <section class="lastsection">
+                <button style="font-family: 'Times New Roman', Times, serif;" onclick="closePopup()" type="button" style="width: auto;">Close</button>
+                <button style="font-family: 'Times New Roman', Times, serif;" onclick="passwordcheck()" type="button" style="width: auto;">Send message</button>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>
